@@ -50,7 +50,7 @@ Feel free to architect your collections and documents as you want.
 Create a Node/Typescript API that have the followings routes:
 
 `/pokemons`<br />
-`/pokemons/:id ->> CRUD`
+`/pokemons/:id ->>  READ | UPDATE (any fields but not the picture) | DELETE`
 
 Each CRUD method **MUST** called mongoose but how ? Directly or via models/schemas wrapper ?
 
@@ -68,7 +68,7 @@ Well, let's visuzalize pokemons datas and interact with your APIs !<br />
 
 You **MUST** create pages using any uix library you want : React.js, Angular.js, Vue, etc.
 
-For each single pokemon page, we must have an edit button for editing any fields (but not the picture) and a remove button to delete the pokemon.
+For each single pokemon page, we must have an edit button for editing any fields and a remove button to delete the pokemon.
 
 ### 05 Konichiha, #soon
 
