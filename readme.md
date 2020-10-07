@@ -34,7 +34,11 @@ The purpose of theses exercises is simple, display and mutate pokemons.
 
 ## <a name='steps'>🐨 Steps</a>
 
-### 01 Initialization
+### 00 Prélude
+
+Your project **MUST** run with **Docker** : Database, server, client, etc.
+
+### 01 Bonjour, Pokémon
 
 You **MUST USE** [json-pokemon](https://www.npmjs.com/package/json-pokemon) package to fill your Mongo database ;<br />
 Feel free to architect your collections and documents as you want.
@@ -45,14 +49,14 @@ Feel free to architect your collections and documents as you want.
 
 Create a Node/Typescript API that have the followings routes:
 
-/pokemons
-/pokemons/:id ->> CRUD
+`/pokemons`<br />
+`/pokemons/:id ->> CRUD`
 
 Each CRUD method **MUST** called mongoose but how ? Directly or via models/schemas wrapper ?
 
 > Take an inspiration [here](https://hackernoon.com/how-to-link-mongoose-and-typescript-for-a-single-source-of-truth-94o3uqc)
 
-### 03 Bonjour Postman
+### 03 Salam Postman
 
 Now that your API server is set, let's create a Postman collection that we can share to any developer :)
 
