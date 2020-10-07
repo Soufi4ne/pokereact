@@ -24,7 +24,7 @@ Majdi Toumi$
 
 > Don't forget, there is no useless question :-)
 
-- You **MUST** return the project before Friday October, 16 at 4:00 pm
+- You **MUST** return the project before Friday October, 9 at 23:42
 - You **MUST** add `pu-erh` user as a collaborator.
 - YOU **MUST** define all functions signature by yourself :)
 
