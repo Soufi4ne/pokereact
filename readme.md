@@ -11,67 +11,133 @@
 
 Hi, here are some rules to carry out this story oav;
 
-- You **MUST** create a git repository named `cx-db-oav1-poke-mon-go`
-- You **MUST** create a file called `.author` with your firstname and lastname followed by a newline.
+- You **MUST** create a git repository named `cx-react-pokemon`
+- You **MUST** create a file called `.author` with your members firstnames and lastnames followed by a newline.
 
 ```sh
-~/fp-exercises ❯❯❯ cat -e .author
+~/cx-react-pokemon ❯❯❯ cat -e .author
 Majdi Toumi$
+Dylan De Sousa$
 ```
 
 > Of course, you can talk about the subject with other developers, peer-learning is
-> the key to be a better developer. Don't hesitate to ask questions or help people on slack.
+> the key to be a better developer. Don't hesitate to ask questions or help people on Teams.
 
 > Don't forget, there is no useless question :-)
 
-- You **MUST** return the project before Friday October, 9 at 23:42
+- You **MUST** return the project before Tuesday October, 1 at 23:42
 - You **MUST** add `pu-erh` user as a collaborator.
 - YOU **MUST** define all functions signature by yourself :)
 
 ## <a name='overview'>🐱 Overview</a>
 
-The purpose of theses exercises is simple, display and mutate pokemons.
+The purpose of theses exercises is simple, manipulate and display pokemons.
 
 ## <a name='steps'>🐨 Steps</a>
 
 ### 00 Prélude
 
-Your project **MUST** run with **Docker** : Database, server, client, etc.
+The purpose is to create a simple API using [**express**](https://expressjs.com/fr/) and a showcase app using **React.js**
+
+## The server
+
+Create a directory call `server` on the `cx-react-pokemon` directory
 
 ### 01 Bonjour, Pokémon
 
-You **MUST USE** [json-pokemon](https://www.npmjs.com/package/json-pokemon) package to fill your Mongo database ;<br />
-Feel free to architect your collections and documents as you want.
+You **MUST USE** [**pokedex.json**](./pokedex.json) data to fill a Postgres Database by using [**Knex**](http://knexjs.org/)<br />
+Feel free to architect your database and table as you want.
 
-> Tips, create a function that did it
+> Tips, create a node file that did it and use package.json "script" to call it.
 
-### 02 Hello, API
+### 02 Bootsrap an API
 
-Create a Node/Typescript API that have the followings routes:
+Create a node js server that listen on a port define in args
 
-`/pokemons`<br />
-`/pokemons/:id ->>  READ | UPDATE (any fields but not the picture) | DELETE`
+Ex:
+```sh
+~/cx-react-pokemon/server ❯❯❯ node server.js 4242
+Server is listening on http://localhost:4242
+```
 
-Each CRUD method **MUST** called mongoose but how ? Directly or via models/schemas wrapper ?
+### 03 CRUD Pokemon
 
-> Take an inspiration [here](https://hackernoon.com/how-to-link-mongoose-and-typescript-for-a-single-source-of-truth-94o3uqc)
+We'll allow to Create (POST), Update (PUT) or Delete a pokemon. But also to Read (GET) all or one pokemon,
+Our application should have the following routes:
 
-### 03 Salam Postman
+- `GET /pokemons` - this should respond with a list of all pokemons.
+- `GET /pokemons/:id` - this route should display a single pokemon's found on your daily pokedex.json
+- `POST /items` - this route should add a new pokemon on your pokedex.
+- `DELETE /items/:id` - this route should allow you to delete a specific pokemon
 
-Now that your API server is set, let's create a Postman collection that we can share to any developer :)
+Ex of one pokemon from Pokedex :
 
-> Take a look [here](https://www.postman.com/collection/)
+```json
+    "id": 1,
+    "name": {
+      "english": "Bulbasaur",
+      "japanese": "フシギダネ",
+      "chinese": "妙蛙种子",
+      "french": "Bulbizarre"
+    },
+    "type": [
+      "Grass",
+      "Poison"
+    ],
+    "base": {
+      "HP": 45,
+      "Attack": 49,
+      "Defense": 49,
+      "Sp. Attack": 65,
+      "Sp. Defense": 65,
+      "Speed": 45
+    }
+    ...
+```
 
-### 04 Yo, ui
+> For POST you must fill the fields: `name` and `type`
+
+### 04 Postman discovery
+
+Now that your API server is set, let's play with your API using [**Postman**](https://www.postman.com/collection/)
+
+> You can also use `curl` or your browser
+
+## The client
+
+### 01 Yo, ui
 
 Well, let's visuzalize pokemons datas and interact with your APIs !<br />
 
-You **MUST** create pages using any uix library you want : React.js, Angular.js, Vue, etc.
+You **MUST** initialize your client using [**create react app**](https://fr.reactjs.org/docs/create-a-new-react-app.html#create-react-app) command.
+The purpose is to display all pokemons from API, show one pokemon details and create a new one.
 
-For each single pokemon page, we must have an edit button for editing any fields and a remove button to delete the pokemon.
+> In this part, no rules, the purpose is to use basic stuff that you learn from React to create a sexy app.
 
-### 05 Konichiha, #soon
+### Images
 
+You can display pokemon image using the url `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/$NDEX.png`
+
+> You haveto replace `$NDEX` by the index of a real pokemon, example [here](https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png)
+
+### Demos
+
+Example of an application screen:
+
+<p align="center>
+  <img src="./screen.1.png" width="550" alt="Home page">
+</p>
+
+<p align="center>
+  <img src="./screen.2.png" width="550" alt="Home page">
+</p>
+
+## 02 Bonuses
+
+We love bonuses, so feel free to add anything you want, example:
+- Query parameters search on API side
+- Dark Theme
+- ...
 
 ## <a name='credits'>🐵 Credits</a>
 
