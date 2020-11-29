@@ -25,7 +25,7 @@ Dylan De Sousa$
 
 > Don't forget, there is no useless question :-)
 
-- You **MUST** return the project before Tuesday October, 1 at 23:42
+- You **MUST** return the project before Sunday December, 6 at 23:42
 - You **MUST** add `pu-erh` user as a collaborator.
 - YOU **MUST** define all functions signature by yourself :)
 
@@ -124,12 +124,12 @@ You can display pokemon image using the url `https://assets.pokemon.com/assets/c
 
 Example of an application screen:
 
-<p align="center>
-  <img src="./screen.1.png" width="550" alt="Home page">
+<p align="center">
+  <img alt="" src="screen.1.png" />
 </p>
 
-<p align="center>
-  <img src="./screen.2.png" width="550" alt="Home page">
+<p align="center">
+  <img alt="" src="screen.2.png" />
 </p>
 
 ## 02 Bonuses
