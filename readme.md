@@ -50,7 +50,7 @@ Feel free to architect your database and table as you want.
 
 > Tips, create a node file that did it and use package.json "script" to call it.
 
-### 02 Bootsrap an API
+### 02 Bootstrap an API
 
 Create a node js server that listen on a port define in args
 
@@ -67,8 +67,8 @@ Our application should have the following routes:
 
 - `GET /pokemons` - this should respond with a list of all pokemons.
 - `GET /pokemons/:id` - this route should display a single pokemon's found on your daily pokedex.json
-- `POST /items` - this route should add a new pokemon on your pokedex.
-- `DELETE /items/:id` - this route should allow you to delete a specific pokemon
+- `POST /pokemons` - this route should add a new pokemon on your pokedex.
+- `DELETE /pokemons/:id` - this route should allow you to delete a specific pokemon
 
 Ex of one pokemon from Pokedex :
 
