@@ -112,6 +112,8 @@ Well, let's visuzalize pokemons datas and interact with your APIs !<br />
 You **MUST** initialize your client using [**create react app**](https://fr.reactjs.org/docs/create-a-new-react-app.html#create-react-app) command.
 The purpose is to display all pokemons from API, show one pokemon details and create a new one.
 
+The directory must be `client`
+
 > In this part, no rules, the purpose is to use basic stuff that you learn from React to create a sexy app.
 
 ### Images
