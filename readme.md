@@ -25,7 +25,7 @@ Dylan De Sousa$
 
 > Don't forget, there is no useless question :-)
 
-- You **MUST** return the project before Sunday December, 6 at 23:42
+- You **MUST** return the project before Tuesday December, 8 at 23:42
 - You **MUST** add `pu-erh` user as a collaborator.
 - YOU **MUST** define all functions signature by yourself :)
 
