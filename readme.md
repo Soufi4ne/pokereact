@@ -25,7 +25,7 @@ Dylan De Sousa$
 
 > Don't forget, there is no useless question :-)
 
-- You **MUST** return the project before Tuesday December, 8 at 23:42
+- You **MUST** return the project before Wednesday January 2021, 6 at 20:00
 - You **MUST** add `pu-erh` user as a collaborator.
 - YOU **MUST** define all functions signature by yourself :)
 
@@ -37,7 +37,8 @@ The purpose of theses exercises is simple, manipulate and display pokemons.
 
 ### 00 Prélude
 
-The purpose is to create a simple API using [**express**](https://expressjs.com/fr/) and a showcase app using **React.js**
+The purpose is to create a simple API using [**express**](https://expressjs.com/fr/) and a showcase app using **React.js**.<br />
+You'll have 2 separate projects in the same repository : A **server** and a **client**
 
 ## The server
 
@@ -45,14 +46,11 @@ Create a directory call `server` on the `cx-react-pokemon` directory
 
 ### 01 Bonjour, Pokémon
 
-You **MUST USE** [**pokedex.json**](./pokedex.json) data to fill a Postgres Database by using [**Knex**](http://knexjs.org/)<br />
-Feel free to architect your database and table as you want.
-
-> Tips, create a node file that did it and use package.json "script" to call it.
+You **MUST USE** [**pokedex.json**](./pokedex.json) to read the datas
 
 ### 02 Bootstrap an API
 
-Create a node js server that listen on a port define in args
+Create a node js server that listen on a port define in argv
 
 Ex:
 ```sh
@@ -60,15 +58,19 @@ Ex:
 Server is listening on http://localhost:4242
 ```
 
-### 03 CRUD Pokemon
+Ex:
+```sh
+~/cx-react-pokemon/server ❯❯❯ node server.js
+[usage] node server.js <port> // a free usage message to display 
+```
 
-We'll allow to Create (POST), Update (PUT) or Delete a pokemon. But also to Read (GET) all or one pokemon,
+### 03 Hello Pokemon
+
+We'll allow to read (GET) all or one pokemon,
 Our application should have the following routes:
 
 - `GET /pokemons` - this should respond with a list of all pokemons.
 - `GET /pokemons/:id` - this route should display a single pokemon's found on your daily pokedex.json
-- `POST /pokemons` - this route should add a new pokemon on your pokedex.
-- `DELETE /pokemons/:id` - this route should allow you to delete a specific pokemon
 
 Ex of one pokemon from Pokedex :
 
@@ -95,8 +97,6 @@ Ex of one pokemon from Pokedex :
     ...
 ```
 
-> For POST you must fill the fields: `name` and `type`
-
 ### 04 Postman discovery
 
 Now that your API server is set, let's play with your API using [**Postman**](https://www.postman.com/collection/)
@@ -115,6 +115,7 @@ The purpose is to display all pokemons from API, show one pokemon details and cr
 The directory must be `client`
 
 > In this part, no rules, the purpose is to use basic stuff that you learn from React to create a sexy app.
+> The client is another directory, you'll not have react code on the server
 
 ### Images
 
@@ -138,7 +139,6 @@ Example of an application screen:
 
 We love bonuses, so feel free to add anything you want, example:
 - Query parameters search on API side
-- Dark Theme
 - ...
 
 ## <a name='credits'>🐵 Credits</a>
